@@ -1,0 +1,25 @@
+{
+    "name": "word-generator",
+    "version": "1.0.0",
+    "description": "word generator for custom word lists for scribblio",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run build && node dist/index.js",
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "wagi",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/fs-extra": "^8.1.0",
+        "@types/node": "^13.9.5",
+        "@types/request-promise": "^4.1.46",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "fs-extra": "^9.0.0",
+        "request": "^2.88.2",
+        "request-promise": "^4.2.5"
+    }
+}
