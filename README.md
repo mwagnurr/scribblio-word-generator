@@ -26,3 +26,6 @@ execute:
     npm start
 
 copy paste out/words.txt content to scribble.io custom word list
+
+
+Optionally: change ignored.json words to include words to ignore (default is many english stopwords)

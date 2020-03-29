@@ -10,10 +10,12 @@ const main = async () => {
 
     let resultWords: Set<string> = new Set();
 
+    const ignoredList: Set<string> = new Set(readJsonSync('input/ignored.json'));
+    console.log('..ignored word list read in. size: ', ignoredList.size);
 
     const inputJson: { words: Array<string> } = readJsonSync('input/input.json');
-
-    console.log('inputJson', inputJson)
+    console.log('..input json read in.');
+    console.log('inputJson: ', inputJson)
     console.log('==============================================');
 
     for (let currInputWord of inputJson.words) {
@@ -26,11 +28,10 @@ const main = async () => {
         if (result) {
 
             for (let curr of result) {
-
-                console.log('add word: ', curr.word);
-                resultWords.add(curr.word);
-
-
+                if (!ignoredList.has(curr.word)) {
+                    console.log('add word: ', curr.word);
+                    resultWords.add(curr.word);
+                }
             }
             console.log('... added words, curr number of words: ', resultWords.size);
             console.log('==============================================');
