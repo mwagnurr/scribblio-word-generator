@@ -6,7 +6,19 @@ to get related words from the input word list
 
 ### How to use
 
-provide input/input.json file with words in the correct structure
+provide input/input.json file with words in the correct structure,
+e.g.:
+
+```json
+{
+    "words": [
+        "dangerous",
+        "edible",
+        "playful",
+        "music"
+    ]
+}
+```
 
 execute:
 
